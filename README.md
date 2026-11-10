@@ -1,1 +1,1 @@
-# Pruebas_gr-ficas
+# Pruebas_graficas
