@@ -40,7 +40,6 @@ st.info("""
 **¿Cómo está hecho?** En Matplotlib usamos `ax.plot()`, configurando manualmente el marcador y el color. En Seaborn usamos `sns.lineplot()`, que abstrae la configuración y aplica estilos más limpios por defecto.
 """)
 
-st.header("1. Gráfico de Líneas")
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Matplotlib")
@@ -67,7 +66,6 @@ st.info("""
 **¿Cómo está hecho?** En Matplotlib requiere calcular manualmente las posiciones de los ejes `X` (`x - ancho/2` y `x + ancho/2`). En Seaborn es más directo utilizando `df.melt()` para estructurar los datos y pasando el parámetro `hue='Concepto'`.
 """)
 
-st.header("2. Gráfico de Barras")
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Matplotlib")
@@ -100,7 +98,6 @@ st.info("""
 **¿Cómo está hecho?** En Matplotlib empleamos `ax.scatter()`. En Seaborn usamos `sns.scatterplot()`, facilitando la integración con DataFrames y la posibilidad de mapear variables adicionales a color o tamaño de punto.
 """)
 
-st.header("3. Gráfico de Dispersión")
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Matplotlib")
@@ -127,7 +124,6 @@ st.info("""
 **¿Cómo está hecho?** En Matplotlib usamos `ax.hist()`. Seaborn con `sns.histplot()` añade de manera sencilla la estimación de densidad de kernel (`kde=True`) para trazar la curva suavizada sobre las barras.
 """)
 
-st.header("4. Histograma")
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Matplotlib")
@@ -153,7 +149,6 @@ st.info("""
 **¿Cómo está hecho?** En Matplotlib usamos `ax.boxplot()`, requiriendo pasar parámetros como `patch_artist=True` para dar color a la caja. En Seaborn (`sns.boxplot()`) la sintaxis es muy directa y la caja adopta automáticamente los estilos estadísticos.
 """)
 
-st.header("5. Diagrama de Caja")
 col1, col2 = st.columns(2)
 with col1:
     st.subheader("Matplotlib")
