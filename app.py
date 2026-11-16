@@ -12,7 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-3
+
 st.title("Visualización de Datos: Matplotlib vs Seaborn")
 
 np.random.seed(42)
