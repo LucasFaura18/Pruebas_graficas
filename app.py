@@ -32,6 +32,14 @@ df_scatter = pd.DataFrame({
 datos_hist = np.random.normal(loc=70, scale=10, size=150)
 
 # 1. GRÁFICO DE LÍNEAS
+st.header("1. Gráfico de Líneas: Evolución Temporal")
+
+st.info("""
+**¿Por qué este gráfico?** Se elige un gráfico de líneas para representar series temporales o secuencias ordenadas (días de la semana). Permite identificar tendencias de aumento, disminución o patrones de comportamiento a lo largo del tiempo.  
+**¿Qué se ve?** Muestra la evolución ascendente de las ventas desde el lunes hasta alcanzar un pico en el fin de semana.  
+**¿Cómo está hecho?** En Matplotlib usamos `ax.plot()`, configurando manualmente el marcador y el color. En Seaborn usamos `sns.lineplot()`, que abstrae la configuración y aplica estilos más limpios por defecto.
+""")
+
 st.header("1. Gráfico de Líneas")
 col1, col2 = st.columns(2)
 with col1:
@@ -50,6 +58,15 @@ with col2:
     st.pyplot(fig)
 
 # 2. GRÁFICO DE BARRAS
+
+st.header("2. Gráfico de Barras Agrupadas: Comparación Categórica")
+
+st.info("""
+**¿Por me eligió este gráfico?** Es idóneo para comparar diferentes magnitudes discretas entre categorías (en este caso, Ventas vs. Gastos en cada día).  
+**¿Qué se ve?** Permite evaluar visualmente el margen de beneficio diario comparando la altura de las barras de Ventas contra las de Gastos.  
+**¿Cómo está hecho?** En Matplotlib requiere calcular manualmente las posiciones de los ejes `X` (`x - ancho/2` y `x + ancho/2`). En Seaborn es más directo utilizando `df.melt()` para estructurar los datos y pasando el parámetro `hue='Concepto'`.
+""")
+
 st.header("2. Gráfico de Barras")
 col1, col2 = st.columns(2)
 with col1:
@@ -74,6 +91,15 @@ with col2:
     st.pyplot(fig)
 
 # 3. GRÁFICO DE DISPERSIÓN
+
+st.header("3. Gráfico de Dispersión (Scatter Plot): Relación entre Variables")
+
+st.info("""
+**¿Por qué este gráfico?** Se selecciona para analizar la correlación o relación cuantitativa entre dos variables numéricas continuas.  
+**¿Qué se ve?** Muestra la relación entre las horas dedicadas al estudio y la nota obtenida en el examen, observando la distribución o tendencia de los datos.  
+**¿Cómo está hecho?** En Matplotlib empleamos `ax.scatter()`. En Seaborn usamos `sns.scatterplot()`, facilitando la integración con DataFrames y la posibilidad de mapear variables adicionales a color o tamaño de punto.
+""")
+
 st.header("3. Gráfico de Dispersión")
 col1, col2 = st.columns(2)
 with col1:
@@ -92,6 +118,15 @@ with col2:
     st.pyplot(fig)
 
 # 4. HISTOGRAMA
+
+st.header("4. Histograma: Distribución de Frecuencia")
+
+st.info("""
+**¿Por qué este gráfico?** Es la mejor opción para entender la forma de la distribución de una única variable continua (agrupando los datos en intervalos o *bins*).  
+**¿Qué se ve?** La frecuencia con la que se concentran las notas de los alumnos alrededor de la media (forma acampanada/normal).  
+**¿Cómo está hecho?** En Matplotlib usamos `ax.hist()`. Seaborn con `sns.histplot()` añade de manera sencilla la estimación de densidad de kernel (`kde=True`) para trazar la curva suavizada sobre las barras.
+""")
+
 st.header("4. Histograma")
 col1, col2 = st.columns(2)
 with col1:
@@ -109,6 +144,15 @@ with col2:
     st.pyplot(fig)
 
 # 5. DIAGRAMA DE CAJA
+
+st.header("5. Diagrama de Caja (Boxplot): Resumen Estadístico")
+
+st.info("""
+**¿Por qué este gráfico?** Es fundamental para resumir estadísticas clave (mediana, cuartiles Q1 y Q3, rango intercuartílico y posibles valores atípicos o *outliers*).  
+**¿Qué se ve?** La dispersión y la simetría de las ventas semanales.  
+**¿Cómo está hecho?** En Matplotlib usamos `ax.boxplot()`, requiriendo pasar parámetros como `patch_artist=True` para dar color a la caja. En Seaborn (`sns.boxplot()`) la sintaxis es muy directa y la caja adopta automáticamente los estilos estadísticos.
+""")
+
 st.header("5. Diagrama de Caja")
 col1, col2 = st.columns(2)
 with col1:
